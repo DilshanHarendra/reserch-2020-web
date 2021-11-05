@@ -1,7 +1,17 @@
 :root{
     --primary-color:#fed136;
 }
-
+ol {
+    counter-reset: list;
+      }
+      ol > li {
+          list-style: none;
+      }
+     
+      ol > li:before {
+          content: "[ "counter(list) " ] ";
+          counter-increment: list;
+      }
 body{overflow-x:hidden;font-family:'Roboto Slab','Helvetica Neue',Helvetica,Arial,sans-serif}
 p{line-height:1.75}
 a{color:var(--primary-color)}
